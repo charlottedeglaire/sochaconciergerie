@@ -347,3 +347,59 @@ h2 {
   font-size: 12px;
   color: #777;
 }
+
+/* --- OPTIMISATION MOBILE (iPhone) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Masquer le logo avec la clé */
+    .logo-container {
+        display: none;
+    }
+
+    /* 2. Centrer le nom de la conciergerie */
+    .header-container {
+        justify-content: center; /* Centre le titre horizontalement */
+        text-align: center;
+    }
+
+    .title h1 {
+        font-size: 32px; /* Réduction du titre SOCHA */
+    }
+
+    .title span {
+        font-size: 16px; /* Réduction de CONCIERGERIE */
+        letter-spacing: 2px;
+    }
+
+    /* 3. Ajuster la section Hero (fond et texte) */
+    .hero-section {
+        padding-left: 0; /* Enlever le décalage de 8% */
+        justify-content: center; /* Centrer le contenu */
+        text-align: center;
+        height: auto; /* Laisser la section s'adapter au contenu */
+        padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem; /* Texte beaucoup plus petit et proportionné */
+        letter-spacing: -1px; /* Moins serré pour la lecture */
+        margin-bottom: 1.5rem;
+    }
+
+    /* 4. Aligner la liste et le bouton */
+    .hero-features {
+        margin-bottom: 2.5rem;
+        display: inline-block; /* Pour pouvoir centrer la liste */
+        text-align: left; /* Garder les tirets alignés à gauche de leurs phrases */
+    }
+
+    .hero-features li {
+        font-size: 1rem;
+    }
+
+    .hero-button {
+        display: block;
+        width: fit-content;
+        margin: 0 auto; /* Centre le bouton */
+    }
+}
