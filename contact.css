@@ -1,0 +1,220 @@
+/* Import des polices existantes */
+@font-face { font-family: 'italiana'; src: url('fonts/Italiana-Regular.ttf'); }
+@font-face { font-family: 'inter'; src: url('fonts/Inter-Medium.ttf'); }
+@font-face { font-family: 'garet'; src: url('fonts/garet/Garet-Book.ttf'); }
+@font-face { font-family: 'bebas'; src: url('fonts/bebas_neue/BebasNeue-Regular.ttf'); }
+
+:root {
+    --box-white: rgba(255, 255, 255, 0.85);
+    --text-dark: #111;
+    --accent-beige: #faf7f3;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #ffffff;
+    font-family: 'inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* HEADER (Reprise de ton accueil) */
+.header {
+    height: 95px;
+    background-color: var(--accent-beige);
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.header-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title h1 { font-family: 'italiana', serif; font-size: 45px; color: var(--text-dark); }
+.title span { display: block; font-size: 21px; font-weight: 600; font-family: 'inter'; letter-spacing: 2px; }
+.logo {
+    margin-top: 15px;
+     max-height: 100px; 
+     width: auto; }
+
+/* SECTION CONTACT */
+.contact-section {
+    min-height: calc(100vh - 95px);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/spacejoy-umAXneH4GhA-unsplash_2_11zon.jpg'); /* Utilise une photo d'intérieur chic */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.contact-card {
+    background: var(--box-white);
+    backdrop-filter: blur(15px);
+    border-radius: 45px;
+    padding: 60px 50px;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-family: 'bebas', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.contact-subtitle {
+    font-family: 'garet', serif;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+/* FORMULAIRE */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 18px 25px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.5);
+    font-family: 'inter', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--text-dark);
+    background: white;
+}
+
+.submit-btn {
+    background-color: var(--text-dark);
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'inter', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    transform: scale(1.02);
+    background-color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header-container { justify-content: center; }
+    .logo-container { display: none; }
+    .form-group-row { flex-direction: column; gap: 20px; }
+    .contact-card { padding: 40px 25px; border-radius: 30px; }
+    h2 { font-size: 2.2rem; }
+}
+
+/* Footer CSS */
+.footer {
+  background-color: #f9f9f9; /* blanc cassé */
+  border-top: 1px solid #e0e0e0;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  color: #333;
+}
+
+.footer a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #555; /* léger effet au survol */
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-contact {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Container du lien pour aligner icône + texte */
+.brand-link {
+    display: flex;
+    align-items: center; /* Aligne verticalement l'icône et le texte */
+    text-decoration: none;
+    gap: 15px; /* Espace entre la petite maison et le texte SOCHA */
+    color: #111;
+}
+
+/* Style de la petite icône maison */
+.home-icon {
+    width: 35px;  /* Taille ajustable selon tes préférences */
+    height: 35px;
+    display: block;
+}
+
+/* Ajustement du titre pour enlever les marges par défaut */
+.title h1 {
+    line-height: 1; /* Pour que le titre soit bien calé sur l'icône */
+    margin: 0;
+}
+
+.title span {
+    line-height: 1.2;
+}
+
+/* Sur mobile (iPhone), on s'assure que tout reste centré */
+@media (max-width: 768px) {
+    .header-container {
+        justify-content: center;
+    }
+    
+    .brand-link {
+        justify-content: center;
+    }
+}
