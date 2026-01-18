@@ -1,0 +1,349 @@
+@font-face {
+    font-family: 'italiana';
+    src: url('fonts/Italiana-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('fonts/Inter-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'garet';
+    src: url('fonts/garet/Garet-Book.ttf');
+}
+
+@font-face {
+    font-family: 'bebas';
+    src: url('fonts/bebas_neue/BebasNeue-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+    height: 95px;
+    background-color: #faf7f3;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* TITRE */
+.title h1 {
+    font-family: 'italiana', serif;
+    font-size: 45px;
+    font-weight: 500;
+    color: #111;
+}
+
+.title span {
+    display: block;
+    font-size: 21px;
+    font-weight: 600;
+    font-family: 'inter';
+}
+
+/* LOGO */
+.logo {
+    max-height: 130px;
+    width: auto;
+    display: block;
+}
+
+/* HERO */
+.hero-section {
+    position: relative;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+    background-image:
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* IMPORTANT */
+    background-attachment: scroll;
+    will-change: transform;
+}
+
+@media (min-width: 1024px) {
+    .hero-section {
+        background-attachment: fixed;
+    }
+}
+
+.hero-content {
+    max-width: 800px;
+    color: #EDE5DD;
+}
+
+.hero-content h1 {
+    font-family: 'inter';
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    letter-spacing: -3px;
+    font-weight: 100;
+}
+
+.hero-features {
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+.hero-features li {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.hero-features li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+}
+
+:root {
+    --box-white: rgba(255, 255, 255, 0.72);
+    --text-dark: #1a1a1a;
+    --radius-box: 45px;
+    --radius-icon: 12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.card {
+    flex: 1;
+    min-width: 450px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.black-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Voile noir sur l'image */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.white-box {
+    background: var(--box-white);
+    backdrop-filter: blur(1px);
+    border-radius: var(--radius-box);
+    width: 100%;
+    max-width: 450px;
+    color: var(--text-dark);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    text-align: left; /* Aligne tout le texte à gauche par défaut */
+    padding: 50px 40px; /* Augmente un peu le rembourrage latéral pour décoller du bord */
+}
+
+h2 { 
+    font-family: 'bebas', sans-serif;
+    font-weight: 900; 
+    font-size: 2.5rem; 
+    letter-spacing: -0.5px; 
+}
+
+.subtitle { 
+    font-family: 'garet', serif;
+    color: #555;
+     font-style: italic;
+      margin-bottom: 30px; }
+
+/* Icones */
+.icon-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.svg-wrapper {
+    width: 85px;
+    height: 85px;
+    border: 2px solid var(--text-dark);
+    border-radius: var(--radius-icon);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svg-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Liste */
+.list {
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.list li {
+    font-family: 'garet', serif;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.small-text { 
+    font-size: 0.8rem; 
+    color: #777; 
+    margin-bottom: 25px; 
+    line-height: 1.4; }
+
+/* LE BOUTON NOIR CORRIGÉ */
+.price-btn {
+    background-color: var(--text-dark); /* Fond noir profond */
+    color: #ffffff; /* Texte blanc */
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+    display: block; /* Change inline-block en block pour permettre le centrage */
+    margin: 0 auto; /* Centre le bouton horizontalement dans la boîte */
+    width: fit-content; /* Force le bouton à ne pas prendre toute la largeur */
+    text-align: center;
+}
+
+.price-btn:hover {
+    transform: scale(1.05); /* Petit effet de zoom au survol */
+    background-color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .card { min-width: 100%; height: auto; }
+}
+
+/* Effet actif uniquement sur les écrans larges (Desktop) */
+@media (min-width: 1025px) {
+
+    /* Préparation de l'image pour le zoom */
+    .card {
+        transition: transform 0.5s ease; /* Transition fluide */
+        cursor: pointer;
+    }
+
+    /* 1. LÉGER ZOOM DE L'IMAGE AU SURVOL */
+    /* On cible l'image de fond si elle est dans une balise ou on zoom toute la carte */
+    .card:hover {
+        transform: scale(1.0); /* Zoom de 3% (très élégant) */
+        z-index: 10; /* Passe au-dessus de l'autre bloc */
+    }
+
+    /* 2. VOILE PLUS CLAIR AU SURVOL */
+    .card:hover .black-overlay {
+        background: rgba(0, 0, 0, 0.3); /* On passe de 0.5 à 0.3 pour éclaircir */
+        transition: background 0.5s ease;
+    }
+
+    /* Optionnel : Garder le bloc blanc stable pendant le zoom */
+    .card:hover .white-box {
+        transform: scale(0.98); /* Contre-zoom léger pour que le texte ne paraisse pas trop gros */
+        transition: transform 0.5s ease;
+    }
+}
+
+/* Footer CSS */
+.footer {
+  background-color: #f9f9f9; /* blanc cassé */
+  border-top: 1px solid #e0e0e0;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  color: #333;
+}
+
+.footer a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #555; /* léger effet au survol */
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-contact {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #777;
+}
